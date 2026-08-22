@@ -1,20 +1,20 @@
 [
     {
-        "title": "building the storm ability",
-        "date": "august 22, 2026",
-        "video": "https://www.youtube.com/watch?v=-n_-S01rpMI",
-        "description": "Working on the visuals, movement, and overall feel of the Storm ability."
+        "title": "First Dev Diary",
+        "date": "August 22, 2026",
+        "description": "Working on the new ability system.",
+        "video": "diary1.mp4"
     },
     {
-        "title": "eternal smp",
-        "date": "august 21, 2026",
-        "video": "https://youtu.be/VAAT7-hOHY8",
-        "description": "Working on the trim system and different abilities that come from each trim."
+        "title": "Building the Reroll Animation",
+        "date": "August 24, 2026",
+        "description": "Making the animation feel more alive.",
+        "video": "diary2.mp4"
     },
     {
-        "title": "new particle system",
-        "date": "august 19, 2026",
-        "video": "",
-        "description": "Experimenting with new particle effects and visual systems."
+        "title": "New UI",
+        "date": "August 27, 2026",
+        "description": "Testing a new interface.",
+        "video": "diary3.mp4"
     }
 ]
