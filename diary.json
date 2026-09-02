@@ -6,7 +6,7 @@
         "video": "https://www.youtube.com/watch?v=uCQcDXqkFi0"
     },
     {
-        "title": "Equipping Animation ",
+        "title": "Equipping Animation",
         "date": "August 24, 2026",
         "description": "",
         "video": "https://www.youtube.com/watch?v=78Y3mJ6SiWw"
@@ -16,5 +16,35 @@
         "date": "August 27, 2026",
         "description": "Testing a new interface.",
         "video": "https://www.youtube.com/watch?v=VIDEO_ID_3"
+    },
+    {
+        "title": "New Abilities",
+        "date": "August 29, 2026",
+        "description": "",
+        "video": "https://www.youtube.com/watch?v=VIDEO_ID_4"
+    },
+    {
+        "title": "Particle Effects",
+        "date": "August 30, 2026",
+        "description": "Testing new visual effects and particles.",
+        "video": "https://www.youtube.com/watch?v=VIDEO_ID_5"
+    },
+    {
+        "title": "Ability HUD",
+        "date": "August 31, 2026",
+        "description": "New HUD system for abilities.",
+        "video": "https://www.youtube.com/watch?v=VIDEO_ID_6"
+    },
+    {
+        "title": "New Star System",
+        "date": "September 1, 2026",
+        "description": "Adding new stars and reroll mechanics.",
+        "video": "https://www.youtube.com/watch?v=VIDEO_ID_7"
+    },
+    {
+        "title": "Combat Update",
+        "date": "September 2, 2026",
+        "description": "Testing new combat abilities and effects.",
+        "video": "https://www.youtube.com/watch?v=VIDEO_ID_8"
     }
 ]
