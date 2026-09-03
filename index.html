@@ -157,18 +157,67 @@ button {
     border-color: var(--accent);
 }
 
-.q1 { top: 15%; left: 7%; animation-duration: 11s; transform: rotate(-2deg); }
-.q2 { top: 23%; right: 7%; animation-duration: 14s; transform: rotate(1.5deg); }
-.q3 { bottom: 22%; left: 9%; animation-duration: 13s; transform: rotate(1deg); }
-.q4 { bottom: 13%; right: 9%; animation-duration: 10s; transform: rotate(-1.5deg); }
-.q5 { top: 43%; left: 4%; animation-duration: 12s; transform: rotate(2deg); }
-.q6 { top: 47%; right: 5%; animation-duration: 15s; transform: rotate(-1deg); }
-.q7 { bottom: 7%; left: 43%; animation-duration: 17s; transform: rotate(1deg); }
+.q1 {
+    top: 15%;
+    left: 7%;
+    animation-duration: 11s;
+    transform: rotate(-2deg);
+}
+
+.q2 {
+    top: 23%;
+    right: 7%;
+    animation-duration: 14s;
+    transform: rotate(1.5deg);
+}
+
+.q3 {
+    bottom: 22%;
+    left: 9%;
+    animation-duration: 13s;
+    transform: rotate(1deg);
+}
+
+.q4 {
+    bottom: 13%;
+    right: 9%;
+    animation-duration: 10s;
+    transform: rotate(-1.5deg);
+}
+
+.q5 {
+    top: 43%;
+    left: 4%;
+    animation-duration: 12s;
+    transform: rotate(2deg);
+}
+
+.q6 {
+    top: 47%;
+    right: 5%;
+    animation-duration: 15s;
+    transform: rotate(-1deg);
+}
+
+.q7 {
+    bottom: 7%;
+    left: 43%;
+    animation-duration: 17s;
+    transform: rotate(1deg);
+}
 
 @keyframes floatQuote {
-    0% { margin: 0; }
-    50% { margin: -9px 0 0 12px; }
-    100% { margin: 10px 0 0 -10px; }
+    0% {
+        margin: 0;
+    }
+
+    50% {
+        margin: -9px 0 0 12px;
+    }
+
+    100% {
+        margin: 10px 0 0 -10px;
+    }
 }
 
 .hero-center {
@@ -486,6 +535,76 @@ button {
     font-size: 12px;
 }
 
+
+/* CUSTOMER FEEDBACK */
+
+.feedback-section {
+    min-height: auto;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.feedback-header {
+    margin-bottom: 65px;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+}
+
+.feedback-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition:
+        transform .35s cubic-bezier(.16,1,.3,1),
+        border-color .35s ease,
+        background .35s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    background: var(--surface-2);
+}
+
+.feedback-stars {
+    color: var(--accent);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.feedback-text {
+    color: var(--text);
+    font-size: 20px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.feedback-author {
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.feedback-author span {
+    color: var(--accent);
+}
+
+.feedback-note {
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 12px;
+    opacity: .65;
+}
+
+
 .contact-section {
     min-height: 85vh;
     display: flex;
@@ -621,6 +740,7 @@ button {
 }
 
 @media (max-width: 768px) {
+
     .work-section {
         padding-top: 105px;
         padding-bottom: 90px;
@@ -680,7 +800,9 @@ button {
         font-size: 12px;
     }
 
-    .q5, .q6, .q7 {
+    .q5,
+    .q6,
+    .q7 {
         display: none;
     }
 
@@ -708,6 +830,24 @@ button {
         font-size: clamp(3rem, 14vw, 5rem);
         margin-bottom: 2rem;
     }
+
+    .feedback-section {
+        padding-top: 105px;
+        padding-bottom: 90px;
+    }
+
+    .feedback-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feedback-card {
+        padding: 23px;
+    }
+
+    .feedback-text {
+        font-size: 18px;
+    }
 }
 </style>
 </head>
@@ -715,43 +855,101 @@ button {
 <body>
 
 <header class="topbar">
+
     <div class="mini-logo">V</div>
 
     <nav class="nav">
+
         <a href="#about">about</a>
+
         <a href="#work">work</a>
+
+        <a href="#feedback">feedback</a>
+
         <a href="#contact">contact</a>
-        <button class="settings-button" id="settingsButton">settings</button>
+
+        <button
+            class="settings-button"
+            id="settingsButton">
+            settings
+        </button>
+
     </nav>
+
 </header>
+
 
 <main>
 
 <section class="hero">
 
     <div class="quote-field">
-        <div class="floating-quote q1">"All of you have lived stolen lives, but now you must give them back."</div>
-        <div class="floating-quote q2">"The world would be better if someone was actually in control."</div>
-        <div class="floating-quote q3">"Fear is just another way to control people."</div>
-        <div class="floating-quote q4">"The strong survive because they know when to act."</div>
-        <div class="floating-quote q5">"And what I predicted came to pass."</div>
-        <div class="floating-quote q6">"Sometimes the only answer is to start over."</div>
-        <div class="floating-quote q7">"At random. Dispassionate; fair to rich and poor alike."</div>
+
+        <div class="floating-quote q1">
+            "All of you have lived stolen lives, but now you must give them back."
+        </div>
+
+        <div class="floating-quote q2">
+            "The world would be better if someone was actually in control."
+        </div>
+
+        <div class="floating-quote q3">
+            "Fear is just another way to control people."
+        </div>
+
+        <div class="floating-quote q4">
+            "The strong survive because they know when to act."
+        </div>
+
+        <div class="floating-quote q5">
+            "And what I predicted came to pass."
+        </div>
+
+        <div class="floating-quote q6">
+            "Sometimes the only answer is to start over."
+        </div>
+
+        <div class="floating-quote q7">
+            "At random. Dispassionate; fair to rich and poor alike."
+        </div>
+
     </div>
 
+
     <div class="hero-center">
-        <div class="name-hitbox" id="nameHitbox">
-            <div class="age">15 years old</div>
-            <div class="name" id="name">Void</div>
-            <div class="name-sub">hover me</div>
+
+        <div
+            class="name-hitbox"
+            id="nameHitbox">
+
+            <div class="age">
+                15 years old
+            </div>
+
+            <div
+                class="name"
+                id="name">
+                Void
+            </div>
+
+            <div class="name-sub">
+                hover me
+            </div>
+
         </div>
+
     </div>
 
 </section>
 
-<section class="about-section" id="about">
 
-    <span class="section-label">about me</span>
+<section
+    class="about-section"
+    id="about">
+
+    <span class="section-label">
+        about me
+    </span>
 
     <div class="about-content">
 
@@ -773,23 +971,48 @@ button {
         </div>
 
         <div class="tag-row">
-            <span class="tag">Skript Dev</span>
-            <span class="tag">GLSL</span>
-            <span class="tag">Dimensions</span>
-            <span class="tag">Minecraft</span>
+
+            <span class="tag">
+                Skript Dev
+            </span>
+
+            <span class="tag">
+                GLSL
+            </span>
+
+            <span class="tag">
+                Dimensions
+            </span>
+
+            <span class="tag">
+                Minecraft
+            </span>
+
         </div>
 
     </div>
 
 </section>
 
-<section class="section work-section" id="work">
+
+<section
+    class="section work-section"
+    id="work">
 
     <div class="work-header">
 
         <div class="section-header">
-            <span class="section-label">my work</span>
-            <h2 class="section-title" id="workTitle">projects</h2>
+
+            <span class="section-label">
+                my work
+            </span>
+
+            <h2
+                class="section-title"
+                id="workTitle">
+                projects
+            </h2>
+
         </div>
 
         <button
@@ -802,17 +1025,127 @@ button {
 
     </div>
 
-    <div class="work-grid" id="projectGrid"></div>
+    <div
+        class="work-grid"
+        id="projectGrid">
+    </div>
 
 </section>
 
-<section class="section contact-section" id="contact">
 
-    <span class="section-label">contact</span>
+<section
+    class="section feedback-section"
+    id="feedback">
+
+    <div class="feedback-header">
+
+        <span class="section-label">
+            customer feedback
+        </span>
+
+        <h2 class="section-title">
+            what people say
+        </h2>
+
+    </div>
+
+
+    <div class="feedback-grid">
+
+
+        <div class="feedback-card">
+
+            <div class="feedback-stars">
+                ★★★★★
+            </div>
+
+            <p class="feedback-text">
+                "Void was great to work with. He understood exactly what I wanted and the final result came out even better than I expected."
+            </p>
+
+            <div class="feedback-author">
+                — <span>Client #01</span>
+            </div>
+
+        </div>
+
+
+        <div class="feedback-card">
+
+            <div class="feedback-stars">
+                ★★★★★
+            </div>
+
+            <p class="feedback-text">
+                "Really easy to work with and the attention to detail was crazy. Void made sure everything worked properly before calling it finished."
+            </p>
+
+            <div class="feedback-author">
+                — <span>Client #02</span>
+            </div>
+
+        </div>
+
+
+        <div class="feedback-card">
+
+            <div class="feedback-stars">
+                ★★★★★
+            </div>
+
+            <p class="feedback-text">
+                "Void did an amazing job on the scripting and effects. The ability ended up looking way cleaner than I originally imagined."
+            </p>
+
+            <div class="feedback-author">
+                — <span>Client #03</span>
+            </div>
+
+        </div>
+
+
+        <div class="feedback-card">
+
+            <div class="feedback-stars">
+                ★★★★★
+            </div>
+
+            <p class="feedback-text">
+                "Great communication, fast work, and actually cared about making the project feel polished. Would definitely work with Void again."
+            </p>
+
+            <div class="feedback-author">
+                — <span>Client #04</span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="feedback-note">
+        Sample feedback — names omitted.
+    </div>
+
+</section>
+
+
+<section
+    class="section contact-section"
+    id="contact">
+
+    <span class="section-label">
+        contact
+    </span>
 
     <div class="contact-title">
+
         wanna<br>
-        <span>talk?</span>
+
+        <span>
+            talk?
+        </span>
+
     </div>
 
     <div class="contact-links">
@@ -836,51 +1169,88 @@ button {
 
 </main>
 
+
 <footer class="footer">
-    <span>VOID © 2026</span>
+
+    <span>
+        VOID © 2026
+    </span>
+
 </footer>
 
-<aside class="settings-panel" id="settingsPanel">
 
-    <button class="close-settings" id="closeSettings">×</button>
+<aside
+    class="settings-panel"
+    id="settingsPanel">
+
+    <button
+        class="close-settings"
+        id="closeSettings">
+        ×
+    </button>
 
     <div class="settings-title">
         settings
     </div>
 
+
     <div class="setting">
+
         <div class="setting-label">
             background music
         </div>
 
-        <button class="toggle" id="musicToggle"></button>
+        <button
+            class="toggle"
+            id="musicToggle">
+        </button>
+
     </div>
 
+
     <div class="setting">
+
         <div class="setting-label">
             light mode
         </div>
 
-        <button class="toggle" id="themeToggle"></button>
+        <button
+            class="toggle"
+            id="themeToggle">
+        </button>
+
     </div>
 
+
     <div class="setting">
+
         <div class="setting-label">
             less animation
         </div>
 
-        <button class="toggle" id="motionToggle"></button>
+        <button
+            class="toggle"
+            id="motionToggle">
+        </button>
+
     </div>
 
+
     <div class="setting">
+
         <div class="setting-label">
             quotes
         </div>
 
-        <button class="toggle active" id="quoteToggle"></button>
+        <button
+            class="toggle active"
+            id="quoteToggle">
+        </button>
+
     </div>
 
 </aside>
+
 
 <audio
     id="backgroundMusic"
@@ -889,33 +1259,57 @@ button {
     preload="auto">
 </audio>
 
+
 <script>
 
 const body = document.body;
 
-const nameHitbox = document.getElementById("nameHitbox");
-const name = document.getElementById("name");
+const nameHitbox =
+    document.getElementById("nameHitbox");
 
-const settingsButton = document.getElementById("settingsButton");
-const settingsPanel = document.getElementById("settingsPanel");
-const closeSettings = document.getElementById("closeSettings");
+const name =
+    document.getElementById("name");
 
-const musicToggle = document.getElementById("musicToggle");
-const themeToggle = document.getElementById("themeToggle");
-const motionToggle = document.getElementById("motionToggle");
-const quoteToggle = document.getElementById("quoteToggle");
+const settingsButton =
+    document.getElementById("settingsButton");
 
-const music = document.getElementById("backgroundMusic");
+const settingsPanel =
+    document.getElementById("settingsPanel");
 
-const quotes = document.querySelectorAll(".floating-quote");
+const closeSettings =
+    document.getElementById("closeSettings");
 
-const diaryToggle = document.getElementById("diaryToggle");
-const projectGrid = document.getElementById("projectGrid");
-const workTitle = document.getElementById("workTitle");
+const musicToggle =
+    document.getElementById("musicToggle");
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+const motionToggle =
+    document.getElementById("motionToggle");
+
+const quoteToggle =
+    document.getElementById("quoteToggle");
+
+const music =
+    document.getElementById("backgroundMusic");
+
+const quotes =
+    document.querySelectorAll(".floating-quote");
+
+const diaryToggle =
+    document.getElementById("diaryToggle");
+
+const projectGrid =
+    document.getElementById("projectGrid");
+
+const workTitle =
+    document.getElementById("workTitle");
 
 let musicEnabled = false;
 
 let workProjects = [];
+
 let diaryProjects = [];
 
 let showingDiary = false;
@@ -938,7 +1332,10 @@ function getYouTubeId(url) {
 
 /* PROJECT GRID */
 
-function renderProjectGrid(projects, isDiary = false) {
+function renderProjectGrid(
+    projects,
+    isDiary = false
+) {
 
     if (!projectGrid) return;
 
@@ -948,7 +1345,9 @@ function renderProjectGrid(projects, isDiary = false) {
 
         projectGrid.innerHTML = `
             <div class="project">
+
                 <div class="project-info">
+
                     <div class="project-name">
                         Nothing here yet.
                     </div>
@@ -956,7 +1355,9 @@ function renderProjectGrid(projects, isDiary = false) {
                     <div class="project-type">
                         Add something to ${isDiary ? "diary.json" : "work.json"}.
                     </div>
+
                 </div>
+
             </div>
         `;
 
@@ -964,21 +1365,28 @@ function renderProjectGrid(projects, isDiary = false) {
 
     }
 
+
     projects.forEach(project => {
 
-        const card = document.createElement("div");
+        const card =
+            document.createElement("div");
 
-        card.className = "project";
+        card.className =
+            "project";
 
 
-        const preview = document.createElement("div");
+        const preview =
+            document.createElement("div");
 
-        preview.className = "project-preview";
+        preview.className =
+            "project-preview";
 
 
         if (project.video) {
 
-            const id = getYouTubeId(project.video);
+            const id =
+                getYouTubeId(project.video);
+
 
             if (id) {
 
@@ -987,78 +1395,103 @@ function renderProjectGrid(projects, isDiary = false) {
                     `url("https://i.ytimg.com/vi/${id}/hqdefault.jpg")`
                 );
 
-                preview.dataset.video = project.video;
+                preview.dataset.video =
+                    project.video;
 
 
-                preview.addEventListener("click", () => {
+                preview.addEventListener(
+                    "click",
+                    () => {
 
-                    if (preview.querySelector("iframe")) {
-                        return;
+                        if (
+                            preview.querySelector(
+                                "iframe"
+                            )
+                        ) {
+                            return;
+                        }
+
+
+                        preview.innerHTML = "";
+
+
+                        preview.style.setProperty(
+                            "--thumb-image",
+                            "none"
+                        );
+
+
+                        const iframe =
+                            document.createElement(
+                                "iframe"
+                            );
+
+
+                        iframe.src =
+                            `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+
+
+                        iframe.title =
+                            project.title ||
+                            "YouTube video";
+
+
+                        iframe.allow =
+                            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+
+                        iframe.allowFullscreen =
+                            true;
+
+
+                        iframe.loading =
+                            "lazy";
+
+
+                        iframe.referrerPolicy =
+                            "strict-origin-when-cross-origin";
+
+
+                        preview.appendChild(
+                            iframe
+                        );
+
                     }
-
-
-                    preview.innerHTML = "";
-
-                    preview.style.setProperty(
-                        "--thumb-image",
-                        "none"
-                    );
-
-
-                    const iframe =
-                        document.createElement("iframe");
-
-
-                    iframe.src =
-                        `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
-
-
-                    iframe.title =
-                        project.title || "YouTube video";
-
-
-                    iframe.allow =
-                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-
-
-                    iframe.allowFullscreen = true;
-
-
-                    iframe.loading = "lazy";
-
-
-                    iframe.referrerPolicy =
-                        "strict-origin-when-cross-origin";
-
-
-                    preview.appendChild(iframe);
-
-                });
+                );
 
             } else {
 
-                preview.classList.add("no-video");
+                preview.classList.add(
+                    "no-video"
+                );
 
             }
 
         } else {
 
-            preview.classList.add("no-video");
+            preview.classList.add(
+                "no-video"
+            );
 
         }
 
 
-        const info = document.createElement("div");
+        const info =
+            document.createElement("div");
 
-        info.className = "project-info";
+        info.className =
+            "project-info";
 
 
-        const title = document.createElement("div");
+        const title =
+            document.createElement("div");
 
-        title.className = "project-name";
+        title.className =
+            "project-name";
 
         title.textContent =
-            project.title || "Untitled";
+            project.title ||
+            "Untitled";
 
 
         info.appendChild(title);
@@ -1093,7 +1526,9 @@ function renderProjectGrid(projects, isDiary = false) {
                 description.textContent =
                     project.description;
 
-                info.appendChild(description);
+                info.appendChild(
+                    description
+                );
 
             }
 
@@ -1106,18 +1541,27 @@ function renderProjectGrid(projects, isDiary = false) {
                 "project-type";
 
             description.textContent =
-                project.description || "";
+                project.description ||
+                "";
 
-            info.appendChild(description);
+            info.appendChild(
+                description
+            );
 
         }
 
 
-        card.appendChild(preview);
+        card.appendChild(
+            preview
+        );
 
-        card.appendChild(info);
+        card.appendChild(
+            info
+        );
 
-        projectGrid.appendChild(card);
+        projectGrid.appendChild(
+            card
+        );
 
     });
 
@@ -1126,13 +1570,20 @@ function renderProjectGrid(projects, isDiary = false) {
 
 /* DIARY ANIMATION */
 
-function animateGridSwap(projects, isDiary = false) {
+function animateGridSwap(
+    projects,
+    isDiary = false
+) {
 
     if (!projectGrid) return;
 
-    projectGrid.classList.remove("swapping-in");
+    projectGrid.classList.remove(
+        "swapping-in"
+    );
 
-    projectGrid.classList.add("swapping-out");
+    projectGrid.classList.add(
+        "swapping-out"
+    );
 
 
     setTimeout(() => {
@@ -1141,6 +1592,7 @@ function animateGridSwap(projects, isDiary = false) {
             projects,
             isDiary
         );
+
 
         projectGrid.classList.remove(
             "swapping-out"
@@ -1193,7 +1645,11 @@ async function loadWork() {
             await res.json();
 
 
-        if (!Array.isArray(workProjects)) {
+        if (
+            !Array.isArray(
+                workProjects
+            )
+        ) {
 
             workProjects = [];
 
@@ -1212,7 +1668,9 @@ async function loadWork() {
 
         projectGrid.innerHTML = `
             <div class="project">
+
                 <div class="project-info">
+
                     <div class="project-name">
                         Couldn't load projects.
                     </div>
@@ -1220,7 +1678,9 @@ async function loadWork() {
                     <div class="project-type">
                         Check work.json.
                     </div>
+
                 </div>
+
             </div>
         `;
 
@@ -1252,7 +1712,11 @@ async function loadDiary() {
             await res.json();
 
 
-        if (!Array.isArray(diaryProjects)) {
+        if (
+            !Array.isArray(
+                diaryProjects
+            )
+        ) {
 
             diaryProjects = [];
 
@@ -1298,7 +1762,8 @@ function syncDiaryToggleUi() {
 
 function toggleDiaryView() {
 
-    showingDiary = !showingDiary;
+    showingDiary =
+        !showingDiary;
 
 
     syncDiaryToggleUi();
@@ -1368,8 +1833,9 @@ themeToggle.addEventListener(
 
         const isLight =
             document.documentElement
-                .getAttribute("data-theme")
-            === "light";
+                .getAttribute(
+                    "data-theme"
+                ) === "light";
 
 
         if (isLight) {
@@ -1482,14 +1948,16 @@ quoteToggle.addEventListener(
             );
 
 
-        quotes.forEach(quote => {
+        quotes.forEach(
+            quote => {
 
-            quote.style.opacity =
-                enabled
-                    ? ""
-                    : "0";
+                quote.style.opacity =
+                    enabled
+                        ? ""
+                        : "0";
 
-        });
+            }
+        );
 
     }
 );
@@ -1507,10 +1975,12 @@ nameHitbox.addEventListener(
                     transform:
                         "translate3d(0,0,0) scaleX(1)"
                 },
+
                 {
                     transform:
                         "translate3d(0,-5px,0) scaleX(1.03)"
                 },
+
                 {
                     transform:
                         "translate3d(0,0,0) scaleX(1)"
@@ -1529,30 +1999,32 @@ nameHitbox.addEventListener(
 
 /* QUOTE HOVER */
 
-quotes.forEach(quote => {
+quotes.forEach(
+    quote => {
 
-    quote.addEventListener(
-        "mouseenter",
-        () => {
+        quote.addEventListener(
+            "mouseenter",
+            () => {
 
-            quote.style.animationPlayState =
-                "paused";
+                quote.style.animationPlayState =
+                    "paused";
 
-        }
-    );
+            }
+        );
 
 
-    quote.addEventListener(
-        "mouseleave",
-        () => {
+        quote.addEventListener(
+            "mouseleave",
+            () => {
 
-            quote.style.animationPlayState =
-                "running";
+                quote.style.animationPlayState =
+                    "running";
 
-        }
-    );
+            }
+        );
 
-});
+    }
+);
 
 
 /* ESCAPE */
