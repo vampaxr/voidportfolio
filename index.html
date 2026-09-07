@@ -535,76 +535,6 @@ button {
     font-size: 12px;
 }
 
-
-/* CUSTOMER FEEDBACK */
-
-.feedback-section {
-    min-height: auto;
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-
-.feedback-header {
-    margin-bottom: 65px;
-}
-
-.feedback-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
-    max-width: 1200px;
-}
-
-.feedback-card {
-    padding: 30px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    transition:
-        transform .35s cubic-bezier(.16,1,.3,1),
-        border-color .35s ease,
-        background .35s ease;
-}
-
-.feedback-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-    background: var(--surface-2);
-}
-
-.feedback-stars {
-    color: var(--accent);
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.feedback-text {
-    color: var(--text);
-    font-size: 20px;
-    line-height: 1.55;
-    margin: 0;
-}
-
-.feedback-author {
-    margin-top: 22px;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.feedback-author span {
-    color: var(--accent);
-}
-
-.feedback-note {
-    margin-top: 30px;
-    color: var(--muted);
-    font-size: 12px;
-    opacity: .65;
-}
-
-
 .contact-section {
     min-height: 85vh;
     display: flex;
@@ -830,24 +760,6 @@ button {
         font-size: clamp(3rem, 14vw, 5rem);
         margin-bottom: 2rem;
     }
-
-    .feedback-section {
-        padding-top: 105px;
-        padding-bottom: 90px;
-    }
-
-    .feedback-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .feedback-card {
-        padding: 23px;
-    }
-
-    .feedback-text {
-        font-size: 18px;
-    }
 }
 </style>
 </head>
@@ -863,8 +775,6 @@ button {
         <a href="#about">about</a>
 
         <a href="#work">work</a>
-
-        <a href="#feedback">feedback</a>
 
         <a href="#contact">contact</a>
 
@@ -1028,103 +938,6 @@ button {
     <div
         class="work-grid"
         id="projectGrid">
-    </div>
-
-</section>
-
-
-<section
-    class="section feedback-section"
-    id="feedback">
-
-    <div class="feedback-header">
-
-        <span class="section-label">
-            customer feedback
-        </span>
-
-        <h2 class="section-title">
-            what people say
-        </h2>
-
-    </div>
-
-
-    <div class="feedback-grid">
-
-
-        <div class="feedback-card">
-
-            <div class="feedback-stars">
-                ★★★★★
-            </div>
-
-            <p class="feedback-text">
-                "Void was great to work with. He understood exactly what I wanted and the final result came out even better than I expected."
-            </p>
-
-            <div class="feedback-author">
-                — <span>Client #01</span>
-            </div>
-
-        </div>
-
-
-        <div class="feedback-card">
-
-            <div class="feedback-stars">
-                ★★★★★
-            </div>
-
-            <p class="feedback-text">
-                "Really easy to work with and the attention to detail was crazy. Void made sure everything worked properly before calling it finished."
-            </p>
-
-            <div class="feedback-author">
-                — <span>Client #02</span>
-            </div>
-
-        </div>
-
-
-        <div class="feedback-card">
-
-            <div class="feedback-stars">
-                ★★★★★
-            </div>
-
-            <p class="feedback-text">
-                "Void did an amazing job on the scripting and effects. The ability ended up looking way cleaner than I originally imagined."
-            </p>
-
-            <div class="feedback-author">
-                — <span>Client #03</span>
-            </div>
-
-        </div>
-
-
-        <div class="feedback-card">
-
-            <div class="feedback-stars">
-                ★★★★★
-            </div>
-
-            <p class="feedback-text">
-                "Great communication, fast work, and actually cared about making the project feel polished. Would definitely work with Void again."
-            </p>
-
-            <div class="feedback-author">
-                — <span>Client #04</span>
-            </div>
-
-        </div>
-
-
-    </div>
-
-    <div class="feedback-note">
-        Sample feedback — names omitted.
     </div>
 
 </section>
@@ -1315,8 +1128,6 @@ let diaryProjects = [];
 let showingDiary = false;
 
 
-/* YOUTUBE ID */
-
 function getYouTubeId(url) {
 
     if (!url) return null;
@@ -1329,8 +1140,6 @@ function getYouTubeId(url) {
 
 }
 
-
-/* PROJECT GRID */
 
 function renderProjectGrid(
     projects,
@@ -1568,8 +1377,6 @@ function renderProjectGrid(
 }
 
 
-/* DIARY ANIMATION */
-
 function animateGridSwap(
     projects,
     isDiary = false
@@ -1619,8 +1426,6 @@ function animateGridSwap(
 
 }
 
-
-/* LOAD WORK */
 
 async function loadWork() {
 
@@ -1689,8 +1494,6 @@ async function loadWork() {
 }
 
 
-/* LOAD DIARY */
-
 async function loadDiary() {
 
     try {
@@ -1732,8 +1535,6 @@ async function loadDiary() {
 
 }
 
-
-/* DIARY TOGGLE */
 
 function syncDiaryToggleUi() {
 
@@ -1799,8 +1600,6 @@ if (diaryToggle) {
 }
 
 
-/* SETTINGS */
-
 settingsButton.addEventListener(
     "click",
     () => {
@@ -1824,8 +1623,6 @@ closeSettings.addEventListener(
     }
 );
 
-
-/* THEME */
 
 themeToggle.addEventListener(
     "click",
@@ -1870,8 +1667,6 @@ themeToggle.addEventListener(
 );
 
 
-/* MUSIC */
-
 musicToggle.addEventListener(
     "click",
     async () => {
@@ -1915,8 +1710,6 @@ musicToggle.addEventListener(
 );
 
 
-/* MOTION */
-
 motionToggle.addEventListener(
     "click",
     () => {
@@ -1935,8 +1728,6 @@ motionToggle.addEventListener(
     }
 );
 
-
-/* QUOTES */
 
 quoteToggle.addEventListener(
     "click",
@@ -1962,8 +1753,6 @@ quoteToggle.addEventListener(
     }
 );
 
-
-/* HERO NAME */
 
 nameHitbox.addEventListener(
     "mouseenter",
@@ -1997,8 +1786,6 @@ nameHitbox.addEventListener(
 );
 
 
-/* QUOTE HOVER */
-
 quotes.forEach(
     quote => {
 
@@ -2027,8 +1814,6 @@ quotes.forEach(
 );
 
 
-/* ESCAPE */
-
 document.addEventListener(
     "keydown",
     e => {
@@ -2044,8 +1829,6 @@ document.addEventListener(
     }
 );
 
-
-/* INITIALIZE */
 
 syncDiaryToggleUi();
 
